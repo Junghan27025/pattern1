@@ -138,6 +138,10 @@ int main(void)
             moveBoxPointy2 > boxPointy2 && moveBoxPointy2 < boxPointy1) std::cout << "面倒";
         if (moveBoxPointx1 < boxPointx2 && moveBoxPointx1 > boxPointx1 &&
             moveBoxPointy1 > boxPointy2 && moveBoxPointy1 < boxPointy1) std::cout << "面倒";
+        if (moveBoxPointx1 < boxPointx2 && moveBoxPointx1 > boxPointx1 &&
+            moveBoxPointy2 > boxPointy2 && moveBoxPointy2 < boxPointy1) std::cout << "面倒";
+        if (moveBoxPointx2 < boxPointx2 && moveBoxPointx1 > boxPointx1 &&
+            moveBoxPointy1 > boxPointy2 && moveBoxPointy2 < boxPointy1) std::cout << "面倒";
         
 
 
