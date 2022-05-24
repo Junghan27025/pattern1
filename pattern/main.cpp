@@ -52,7 +52,7 @@ int main(void)
         glEnable(GL_BLEND);
         glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 
-        glClearColor(1.0f, 0.0f, 0.0f, 1.0f); // 화면을 한가지 색으로 채운다(클리어하겠다)
+        glClearColor(0.0f, 0.0f, 0.0f, 0.0f); // 화면을 한가지 색으로 채운다(클리어하겠다)
         glClear(GL_COLOR_BUFFER_BIT);
 
         if (GetAsyncKeyState(VK_LEFT) & 0x8000 || GetAsyncKeyState(VK_LEFT) & 0x8001)
@@ -135,7 +135,10 @@ int main(void)
         //else
           //  xPoint2 = xPoint2 - 0.02f;
         if (moveBoxPointx2 < boxPointx2 && moveBoxPointx2 > boxPointx1 &&
-            moveBoxPointy2 > boxPointy2 && moveBoxPointy2 < boxPointy1) std::cout << "닿았다.";
+            moveBoxPointy2 > boxPointy2 && moveBoxPointy2 < boxPointy1) std::cout << "충돌";
+        if (moveBoxPointx1 < boxPointx2 && moveBoxPointx1 > boxPointx1 &&
+            moveBoxPointy1 > boxPointy2 && moveBoxPointy1 < boxPointy1) std::cout << "충돌";
+        
 
 
 
